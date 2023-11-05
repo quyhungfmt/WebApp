@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.page {
+    min-height: 100vh;
+    background: url(../../Assets/backgrounglogin.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+.BoxLogin {
+    border: 4px solid rgba(225, 225, 225, 0.1);
+    height: 80%;
+    width: 30%;
+    transition: .3s;
+    border-radius: 5px;
+    left: 35%;
+    top: 10%;
+    position: relative;
+}
+.BoxLogin:hover {
+    box-shadow: 0 0 60px blue;
+    border-radius: 15px;
+}
+.formLogin {
+    height: 100%;
+    position: relative;
+}
+h2 {
+    color: #fff;
+    font-size: 40px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxLogin:hover h2 {
+    color: #45f3ff;
+}
+.inputBox {
+    height: 20%;
+    margin-bottom: 2%;
+    position: relative;
+}
+.inputBox input{
+    height: 40%;
+    width: 80%;
+    color:#fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    top: 30%;
+    left: 0%;
+    padding-left: 5%;
+    position: relative;
+   }
+.inputBox label {
+    position: absolute;
+    color: transparent;
+    font-weight: 500;
+    font-size: 90%;
+    pointer-events: none;
+    transition: .5s;
+    left: 12%;
+    top: 41%;
+    /* transform: translate(5%,5%); */
+}
+.inputBox input::placeholder {
+    color: rgba(225, 225, 225, 0.7);
+}
+.icons{
+    position: absolute;
+    color: rgba(225, 225, 225, 0.7);
+    top: 40%;
+    left: 5%;
+}
+.error{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    top: 80%;
+    color: red;
+}
+.lineError {
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    top:30%;
+    width: 90%;
+    left: 5%;
+}
+.formLogin .btnlogin {
+    background-color: gainsboro;
+    height: 10%;
+    width: 80%;
+    position: absolute;
+    bottom: 15%;
+    left:10%;
+    border: none;
+    border-radius: 10px;
+}
+.btnlogin:hover {
+    background: linear-gradient(to right, yellow, red)
+}

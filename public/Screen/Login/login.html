@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-performance-compat.js"></script>
+    <script type="module" src="../../Firebaseapp.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="BoxLogin">
+                    <form action="" id="formLogin" class="formLogin" onsubmit="validationLogin()">
+                        <!-- input Email  -->
+                        <h2>Login</h2>
+                        <div class="inputBox" id="boxEmail">
+                            <ion-icon class="icons" name="mail"></ion-icon>
+                            <input id="inputEmail" type="text" placeholder="Email" oninput="validateEmail(), showtitleE()">
+                            <label for="" id="titleE">Email</label> 
+                            <div class="lineError" id="lineEmail"></div>
+                            <span class="error" id="errorEmail"></span>
+                        </div>
+                            <!-- input password -->
+                        <div class="inputBox" id="boxPass">
+                            <ion-icon class="icons" name="key"></ion-icon>
+                            <input id="inputPass"  type="password" placeholder="Password" oninput="validatePass(),showtitleP()" >
+                            <label id="titleP" for="">Password</label> 
+                            <div class="lineError" id="linePass"></div>
+                            <span class="error" id="errorPass"></span>
+                        </div>
+                        <!-- <div class="lost">
+                            <label for=""><input type="checkbox">Nhớ Mật Khẩu!</label>
+                            <a href="">Quên Mật Khẩu?</a>
+                        </div> -->
+                            <!-- button login -->
+                        <button type="submit" id="btnLg" class="btnlogin" onselect="validationLogin()">LOGIN</button>
+                       
+                    </form>
+            </div>
+        
+        
+    </div>    
+</body>
+</html>

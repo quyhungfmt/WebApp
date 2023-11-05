@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <script defer src="./index.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-performance-compat.js"></script>
+    <script type="module" src="./Firebaseapp.js"></script>
+    
+    <!-- 
+        code trong Firebaseapp.js
+        const firebaseApp = firebase.initializeApp({
+        apiKey: "........................",
+        authDomain: "........................",
+        databaseURL: "........................",
+        projectId: "........................",
+        storageBucket: "........................",
+        messagingSenderId: "........................",
+        appId: "........................b"
+        });
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+
+
+     -->
+
+     
+</head>
+<body>
+    <div class="inputValue">
+        <p>Nhiệt ĐỘ kv1</p>
+        <input id="nhietdokv1"  type="number" min="0" max="100" placeholder="xxxxx" >
+        <button onclick="updateVal3('nhietdokv1','test/kv1','nhietdo')">update</button>
+      </div>
+
+
+
+      <!-- css -->
+      <style>
+        input::placeholder {
+        font-size: 12px;
+        font-weight: 800;
+        color: rgb(255, 170, 0);
+    }
+    input[type="number"] {
+        margin-top: 5px;
+        padding: 2px;
+        width: 200px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid red;
+    }
+
+    .inputValue p {
+        margin-top: 10px;
+    }
+    button {
+        border-radius: 20px;
+        background-color: blue;
+        color: #fff;
+        height: 30px;
+        width: 100px;
+    }
+      </style>
+
+<!-- js -->
+      <script>
+        function updateData (path,key,value) {
+        var ob = {};
+        ob[key] = value;
+        firebase.database().ref(path).update(ob)
+        }
+
+
+        function updateVal3 (id,path,key) {
+        var data = document.getElementById(id).value;
+        updateData(path,key,data);
+    }
+      </script>
+</body>
+</html>
