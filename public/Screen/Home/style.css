@@ -4,19 +4,22 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body{
-    background-color: gainsboro;
+    background-color: #F2F2F2;
+    min-height: 100vh;
 }
 #loader {
-    position: fixed;
     left: 0;
     top: 0;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background-color: #F2F2F2;
     z-index: -1;
+    display: flex;
+    align-items: center;
 }
 nav{
-    background-color: black;
+    background-color: #7FB3D5;
     display: flex;
     width: 100%;
     align-items: center;
@@ -36,7 +39,7 @@ nav:hover header h2{
     animation: textlogo 2s infinite alternate;
 }
 nav header h2 {
-    color: #45f3ff;
+    color: #A8DADC;
     font-weight: 900;
     box-shadow: 0px 0px 70px 10px blue;
     border: none;
@@ -48,12 +51,12 @@ nav header h2 {
 }
 @keyframes textlogo {
     to {
-        background-color: white;
-        box-shadow: 0px 0px 30px 10px blue;
+        background-color: #647D91;
+        box-shadow: 0px 0px 20px 5px #7FB3D5;
     }
 }
 nav form {
-    width: 45%;
+    width: 100%;
     height: 40px;
     margin-left: 20px;
     margin-right: 10px;
@@ -64,18 +67,18 @@ nav form {
 nav form button {
     list-style: none;
     height: 35px;
-    width: 35px;
+    width: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
-    border: 2px solid blue;
+    margin-left: 20px;
+    border: 2px solid #647D91;
     border-radius: 10px;
     font-weight: 800;
+    background-color: #F1E7E0;
 }
 nav form button:hover {
-    box-shadow: 0 0 60px blue;
-    background-color: white;
+    box-shadow: 0 0 60px #8F8F8F;
     border: 2px solid black;
 }
 nav form input {
@@ -85,7 +88,7 @@ nav form input {
     padding-left: 10px;
     outline: none;
     border-radius: 5px;
-    border: none;
+    border: 2px solid #647D91;
 }
 ul {
     list-style: none;
@@ -113,23 +116,59 @@ ul {
     width:auto;
     padding: 5px;
     display: flex;
-    border: 1px solid black;
+    border:2px solid #A8DADC   ;
     border-radius: 10px;
-    justify-content:start;
-    background-color: #45f3ff;
+    justify-content:space-around;
+    background-color: #7FB3D5;
     margin-top: 10px;
 }
-.bodylist ul li h1 {
+.bodylist ul li h2 {
+    margin-left: 10px;
+    color: white;
+    text-shadow: 2px 0 black;
     text-align: center;
-    color: yellow;
 }
-.bodylist ul li .cla {
-    background-color: #fff;
+.bodylist ul li .cls {
+    width: 40%;
+}
+.bodylist ul li .cls:nth-child(1) {
+    width: 40%;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.bodylist ul li .cls .control, .message {
+    width: 50%;
+    border-left-width: 3px;
+    border-left-color: #647D91;
+    border-left-style: dashed;
+    /* background-color:#A8DADC; */
+    border-radius: 10px;
+    margin: 0px 5px 0px 5px;
+    padding: 4px 0px 0px 10px; 
+}
+.message {
+    justify-content: space-evenly;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+}
+  .message p {
+    margin: 5px;
+    color: black;
+    font-size: 22;
+    font-weight:600;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+#cls2 {
+    display: flex;
+    flex-direction: row;
+    width: 57%;
 }
 table {
-    transform: scale(0.8);
+    transform: scale(1);
 }
-
 #chart_div {
    width: 400px; 
    height: 120px;
@@ -154,9 +193,9 @@ table {
 .switchContainer .switchValue {
     height: 25px;
     width: 25px;
-    background-color: #fff;
+    background-color: #A8DADC;
     border-radius: 50% 0 0 50%;
-    box-shadow: 0 0 10px yellow;
+    box-shadow: 0 0 10px #A8DADC;
     transition: margin .5s;
     animation: switch-b ease 0.5s;
 }
@@ -175,14 +214,14 @@ table {
     }
 }
 .switchContainer.on {
-    background-color: #fff;
+    background-color: #F2F2F2;
     border: 2px solid orange;
 }
 .switchContainer.on:hover {
     border: 2px solid black;
 }
 .switchContainer.on .switchValue {
-    background-color: #45f3ff;
+    background-color: #647D91;
     margin-left: 35px;
     box-shadow: 0 0 20px black;
     border-radius: 0 50% 50% 0;
@@ -202,3 +241,4 @@ table {
         transform: rotate(180deg);
     }
 }
+

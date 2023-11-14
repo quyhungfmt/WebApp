@@ -142,8 +142,6 @@ function validationLogin () {
             style_error(3)
             return false
         }
-        else
-        return false
 }
 
 /*

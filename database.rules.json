@@ -1,6 +1,17 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+    "IOT":{
+      "ListModule" : {
+          "$uid" : {
+            ".read" : "auth.uid == $uid",
+            ".write": "auth.uid == $uid"
+          }
+      }
+      ,
+      "$module":{
+    	".read" : "(data.child('public').val() == true || $module.contains('public') || auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')",
+      ".write": "(auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')"   
+      }
+    }
   }
 }
