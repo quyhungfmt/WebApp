@@ -24,7 +24,7 @@ function showList(list = []) {
            <li>
                 <div class="cls" >
                     <h2>Module Name:  ${path}</h2>
-                    <div id="chart_div${value.name}"></div>
+                    <div class = "chart" id="chart_div${value.name}"></div>
                 </div>
                 <div class="cls" id = "cls2">
                   <div class="control">

@@ -1,16 +1,24 @@
 {
-  "rules": {
-    "IOT":{
-      "ListModule" : {
-          "$uid" : {
+  "rules": 
+  {
+    "IOT":
+    {
+      "ListModule" : 
+      {
+          "$uid" : 
+          {
             ".read" : "auth.uid == $uid",
-            ".write": "auth.uid == $uid"
+            ".write": "auth.uid != null"
           }
-      }
-      ,
-      "$module":{
-    	".read" : "(data.child('public').val() == true || $module.contains('public') || auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')",
-      ".write": "(auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')"   
+      },
+      "$module":
+      {
+    	".read" : "(auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')",
+      ".write": "(auth.uid == data.child('uid').val() || auth.uid == 'r3xLmnmag7X0Cbe7M50w8gX1ll73')",
+        "uid": 
+        {
+          ".write" : "true"
+        }
       }
     }
   }
